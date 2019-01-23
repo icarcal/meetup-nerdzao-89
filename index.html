@@ -15,7 +15,7 @@
         <button class="doIt btn">Fazer o curriculum</button>
     </header>
     <main>
-        <form>
+        <form id="formulario" method="GET" action="./curriculum/index.html">
             <fieldset class="full">
                 <legend>Dados Básicos</legend>
                 <div class="box-fieldset">
@@ -24,49 +24,48 @@
                         <input type="text" minlength="6" maxlength="40" name="name" placeholder="Insira o seu nome" required>
                     </div>
                     <div class="box-input one">
-                        <label for="name">Email</label>
-                        <input type="email" name="name" minlength="6" maxlength="40" placeholder="Insira o seu nome"  required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" minlength="6" maxlength="40" placeholder="Insira o seu nome"  required>
                     </div>
                     <div class="box-input">
-                        <label for="name">Nacionalidade</label>
-                        <input type="number" name="name" maxlength="20" minlength="4" placeholder="Brasileira">
+                        <label for="nationality">Nacionalidade</label>
+                        <input type="text" name="nationality" maxlength="20" minlength="4" placeholder="Brasileira">
                     </div>
                     <div class="box-input">
-                        <label for="name">Celular</label>
-                        <input type="number" name="name" maxlength="11" minlength="6" placeholder="09050-555">
+                        <label for="celphone">Celular</label>
+                        <input type="number" name="celphone" maxlength="11" minlength="6" placeholder="(11) 97328-0529">
                     </div>
                     <div class="box-input two">
-                        <label for="name">Endereço</label>
-                        <input type="text" name="name" minlength="6" maxlength="40" placeholder="Rua..." required>
+                        <label for="address">Endereço</label>
+                        <input type="text" name="address" minlength="6" maxlength="40" placeholder="Rua..." required>
                     </div>
                     <div class="box-input">
-                        <label for="name">Bairro</label>
-                        <input type="text" name="name" maxlength="30" minlength="6" placeholder="Bela vista">
+                        <label for="neighbourhood">Bairro</label>
+                        <input type="text" name="neighbourhood" maxlength="30" minlength="6" placeholder="Bela vista">
                     </div>
                     <div class="box-input">
-                        <label for="name">Complemento</label>
-                        <input type="text" name="name" maxlength="11" minlength="6" placeholder="Casa, apartamento, etc">
+                        <label for="compl">Complemento</label>
+                        <input type="text" name="compl" maxlength="11" minlength="6" placeholder="Casa, apartamento, etc">
                     </div>
                     <div class="box-input">
-                        <label for="name">Data de nascimento</label>
-                        <input type="date" name="name" min="01-01-2000" placeholder="Insira o seu nome">
+                        <label for="birthdate">Data de nascimento</label>
+                        <input type="date" name="birthdate" min="01-01-2000" placeholder="Insira o seu nome">
                     </div>
                     <div class="box-input">
-                        <label for="name">Estado Civil</label>
-                        <Select>
-                            <option value="solteiro">Solteiro</option>
-                            <option value="Amasiado">Amasiado</option>
+                        <label for="maritalStatus">Estado Civil</label>
+                        <select name="maritalStatus">
+                            <option value="Solteiro">Solteiro</option>
                             <option value="Casado">Casado</option>
-                            <option value="tristeza">Tá foda vo te conta...</option>
-                        </Select>
+                            <option value="Triste">Tá foda vo te conta...</option>
+                        </select>
                     </div>
                     <div class="box-input">
-                        <label for="name">Sexo</label>
-                        <Select>
+                        <label for="gender">Sexo</label>
+                        <select name="gender">
                             <option value="Masculino">Masculino</option>
                             <option value="Feminino">Feminino</option>
                             <option value="outros">Não Informar</option>
-                        </Select>
+                        </select>
                     </div>
                 </div>
             </fieldset>
@@ -74,128 +73,131 @@
                 <legend>Objetivo</legend>
                 <div class="box-fieldset">
                     <div class="box-input full">
-                        <label for="name">Em poucas palavras, descreva o seu objetivo para o próximo emprego</label>
-                        <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                        <label for="objectives">Em poucas palavras, descreva o seu objetivo para o próximo emprego</label>
+                        <input type="text" name="objectives" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
                     </div>
-                </fieldset>
-                <fieldset class="two">
-                    <legend>Formação Acadêmica</legend>
-                    <div class="box-fieldset">
-                        <div class="box-input two">
-                            <label for="name">Instituição</label>
-                            <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                        </div>
-                        <div class="box-input two">
-                            <label for="name">Curso e semestre</label>
-                            <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                        </div>
-                        <!-- linha 2 -->
-                        <div class="box-input two">
-                            <label for="name">Instituição</label>
-                            <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                        </div>
-                        <div class="box-input two">
-                            <label for="name">Curso e semestre</label>
-                            <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                        </div>
-                    </fieldset>
-                    <fieldset class="two">
-                        <legend>Qualificações</legend>
-                        <div class="box-fieldset">
-                            <div class="box-input two">
-                                <label for="name">1</label>
-                                <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                            </div>
-                            <div class="box-input two">
-                                <label for="name">2</label>
-                                <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                            </div>
-                            <div class="box-input two">
-                                <label for="name">3</label>
-                                <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                            </div>
-                            <div class="box-input two">
-                                <label for="name">4</label>
-                                <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="full">
-                        <legend>Experiência profissional</legend>
-                        <div class="box-fieldset">
-                            <div class="box-input one">
-                                <label for="name">Empresa</label>
-                                <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                            </div>
-                            <div class="box-input two">
-                                <label for="name">Cargo</label>
-                                <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                            </div>
-                            <div class="box-input one">
-                                <label for="name">Tempo de empresa</label>
-                                <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                            </div>
-                            <div class="box-input full">
-                                <label for="name">Atribuições</label>
-                                <textarea name="" id="" cols="30" rows="3"></textarea>
-                            </div>
-                        </div>
-                        <div class="box-fieldset">
-                            <div class="box-input one">
-                                <label for="name">Empresa</label>
-                                <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                            </div>
-                            <div class="box-input two">
-                                <label for="name">Cargo</label>
-                                <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                            </div>
-                            <div class="box-input one">
-                                <label for="name">Tempo de empresa</label>
-                                <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                            </div>
-                            <div class="box-input full">
-                                <label for="name">Atribuições</label>
-                                <textarea name="" id="" cols="30" rows="3"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset class="two">
-                        <legend>Idiomas</legend>
-                        <div class="box-fieldset">
-                            <div class="box-input full">
-                                <label for="name">Língua - Nível</label>
-                                <input type="text" name="name" minlength="6" placeholder="Inglês Avançado - Leitura e conversa">
-                            </div>
-                            <div class="box-input full">
-                                <label for="name">Língua - Nível</label>
-                                <input type="text" name="name" minlength="6" placeholder="Inglês Avançado - Leitura e conversa">
-                            </div>
-                        </fieldset>
-                        <fieldset class="two">
-                            <legend>Certificações</legend>
-                            <div class="box-fieldset">
-                                <div class="box-input two">
-                                    <label for="name">Curso</label>
-                                    <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                                </div>
-                                <div class="box-input two">
-                                    <label for="name">Curso</label>
-                                    <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                                </div>
-                            </div>
-                            <div class="box-fieldset">
-                                <div class="box-input two">
-                                    <label for="name">Curso</label>
-                                    <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                                </div>
-                                <div class="box-input two">
-                                    <label for="name">Curso</label>
-                                    <input type="text" name="name" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
-                                </div>
-                            </div>
-                        </fieldset>
-                        <button type="submit" class="btn submit full">Enviar</button>
-                    </form>
-                </main>
-            </body>
-            </html>
+                </div>
+            </fieldset>
+            <fieldset class="two">
+                <legend>Formação Acadêmica</legend>
+                <div class="box-fieldset">
+                    <div class="box-input two">
+                        <label for="institution">Instituição</label>
+                        <input type="text" name="institution" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input two">
+                        <label for="course">Curso e semestre</label>
+                        <input type="text" name="course" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <!-- linha 2 -->
+                    <div class="box-input two">
+                        <label for="institution2">Instituição</label>
+                        <input type="text" name="institution2" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input two">
+                        <label for="course2">Curso e semestre</label>
+                        <input type="text" name="course2" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+            </fieldset>
+            <fieldset class="two">
+                <legend>Qualificações</legend>
+                <div class="box-fieldset">
+                    <div class="box-input two">
+                        <label for="qualification">1</label>
+                        <input type="text" name="qualification" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input two">
+                        <label for="qualification2">2</label>
+                        <input type="text" name="qualification2" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input two">
+                        <label for="qualification3">3</label>
+                        <input type="text" name="qualification3" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input two">
+                        <label for="qualification4">4</label>
+                        <input type="text" name="qualification4" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="full">
+                <legend>Experiência profissional</legend>
+                <div class="box-fieldset">
+                    <div class="box-input one">
+                        <label for="company">Empresa</label>
+                        <input type="text" name="company" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input two">
+                        <label for="role">Cargo</label>
+                        <input type="text" name="role" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input one">
+                        <label for="companyTime">Tempo de empresa</label>
+                        <input type="text" name="companyTime" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input full">
+                        <label for="attributions">Atribuições</label>
+                        <textarea name="attributions" id="" cols="30" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="box-fieldset">
+                    <div class="box-input one">
+                        <label for="company2">Empresa</label>
+                        <input type="text" name="company2" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input two">
+                        <label for="role2">Cargo</label>
+                        <input type="text" name="role2" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input one">
+                        <label for="companyTime2">Tempo de empresa</label>
+                        <input type="text" name="companyTime2" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input full">
+                        <label for="attributions2">Atribuições</label>
+                        <textarea name="attributions2" id="" cols="30" rows="3"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="two">
+                <legend>Idiomas</legend>
+                <div class="box-fieldset">
+                    <div class="box-input full">
+                        <label for="languages">Língua - Nível</label>
+                        <input type="text" name="languages" minlength="6" placeholder="Inglês Avançado - Leitura e conversa">
+                    </div>
+                    <div class="box-input full">
+                        <label for="languages2">Língua - Nível</label>
+                        <input type="text" name="languages2" minlength="6" placeholder="Inglês Avançado - Leitura e conversa">
+                    </div>
+            </fieldset>
+            <fieldset class="two">
+                <legend>Certificações</legend>
+                <div class="box-fieldset">
+                    <div class="box-input two">
+                        <label for="certificationCourse">Curso</label>
+                        <input type="text" name="certificationCourse" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input two">
+                        <label for="certificationCourse2">Curso</label>
+                        <input type="text" name="certificationCourse2" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                </div>
+                <div class="box-fieldset">
+                    <div class="box-input two">
+                        <label for="certificationCourse3">Curso</label>
+                        <input type="text" name="certificationCourse3" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                    <div class="box-input two">
+                        <label for="certificationCourse4">Curso</label>
+                        <input type="text" name="certificationCourse4" minlength="6" placeholder="Quero me tornar um jovem aprendoca">
+                    </div>
+                </div>
+            </fieldset>
+            <button id="submitButton" type="submit" class="btn submit full">Enviar</button>
+        </form>
+    </main>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
